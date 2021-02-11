@@ -1,4 +1,5 @@
 <?php
+    //Librerias
     //Al ejecutar estre script ejecuta el de la conexion
     include("../../tools/config.php");
     include("../../tools/mysql.php");
@@ -30,6 +31,7 @@
     
     header("Content-type: application/json");
     
+    //Calculos o logica del negocio
     if($usuario = $rs->fetch_assoc()){
         //Si existe el usuario verificamos las contraseña
         if($UsrPwd == $usuario["UsrPwd"]){
