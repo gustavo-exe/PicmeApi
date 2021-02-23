@@ -4,6 +4,7 @@
     include("../../tools/config.php");
     include("../../tools/mysql.php");
     include("../../tools/querys.php");
+    include("../../tools/mailer.php");
     
     //Query de referencia
     //"2_insertar" => "INSERT INTO usuarios VALUES('UsrUsr','UsrNom','UsrPwd','UsrMail','UsrTel','UsrEst');"
@@ -39,6 +40,10 @@
             )
         ));
     }else{
+        //Envio del correo electronico
+        $body = "Su cuenta fue creada correctamente. Debe confirmarla haciendo click en este enlace.";
+        send_email("desde@correo.com","Mi nombre",$UsrMail,"Confirmacion de cuenta",$body);
+
         echo json_encode(array(
             "status"=>"OK",
             "payload"=>array(
