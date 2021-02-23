@@ -35,6 +35,10 @@
     if($usuario = $rs->fetch_assoc()){
         //Si existe el usuario verificamos las contraseña
         if($UsrPwd == $usuario["UsrPwd"]){
+
+            session_start();
+            $_SESSION['UsrUsr'] = $usuario['UsrUsr'];
+
             echo json_encode(array(
                 "status" => "OK",
                 "payload" => array(

@@ -8,12 +8,6 @@
                 "password":"1234",
                 "database":"picme"
             }
-        },
-        "smtp": {
-            "host": "",
-            "user": "",
-            "pass": ""
         }
-    }
     ');
 ?>
