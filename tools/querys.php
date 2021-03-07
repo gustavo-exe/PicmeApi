@@ -10,6 +10,11 @@
             "2_actualizar" => "UPDATE coleccion SET ColNom = ?, ColDsc = ? WHERE ColCod = ? AND UsrUsr = ?;",
             "3_eliminar" => "DELETE FROM coleccion wHERE ColCod = ? AND UsrUsr = ?;",
             "4_listado" => "SELECT * FROM coleccion wHERE UsrUsr = ?;",
+            "5_obtener" => "SELECT * FROM coleccion WHERE UsrUsr = ? AND ColCod = ?;",
+            "6_obtener_fotos" => "SELECT * FROM fotos WHERE UsrUsr = ? AND ColCod = ?;"
+        ),
+        "fotos" => array(
+            "1_insertar" => "INSERT INTO fotos  VALUES(?, ?, ?, ?, ?);"
         )
     )
 ?>
