@@ -14,7 +14,9 @@
             "6_obtener_fotos" => "SELECT * FROM fotos WHERE UsrUsr = ? AND ColCod = ?;"
         ),
         "fotos" => array(
-            "1_insertar" => "INSERT INTO fotos  VALUES(?, ?, ?, ?, ?);"
+            "1_insertar" => "INSERT INTO fotos  VALUES(?, ?, ?, ?, ?);",
+            "2_obtener" => "SELECT * FROM fotos WHERE UsrUsr = ? AND ColCod = ? AND FotCod =?;",
+            "3_eliminar" => "DELETE FROM fotos wHERE UsrUsr = ? AND ColCod = ? AND FotCod = ?;"
         )
     )
 ?>
