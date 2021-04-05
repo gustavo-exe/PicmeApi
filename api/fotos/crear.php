@@ -22,18 +22,28 @@
     //Preparacion para el almacenamiento de la foto
     $UsrUsr     = $_SESSION["UsrUsr"];
     $ColCod     = (isset($_POST["ColCod"]))?$_POST["ColCod"]:""; 
+    //Este va ser el directorio de alamacenamiento, para guardar la foto.
     $store_dir  = "../../data/$UsrUsr/$ColCod/";
+    //Crea un directorio con toda la estructra
     @mkdir($store_dir,0777, true);
     
     $FotFile     = $_FILES["FotFile"];
+    /*
+        tmp_name regresa el path completo temporal
+        Origen
+    */
     $tmp_path    = $FotFile["tmp_name"];
-    $path        = "../../data/".$FotFile["name"];
+    /*
+        Lo movemos y le concatenamos el nombre del archivo
+        Destino
+    */
+    $path        = $store_dir.$FotFile["name"];
     $public_path = "/$UsrUsr/$ColCod/".$FotFile["name"];
     
+    //Movemos el archivo y ya queda allmacenado en donde le estamos indicando.
     if (move_uploaded_file($tmp_path, $path)) {
         
         ///Limpieza de parametros       
-        
         $FotCod     = uniqid();
         $FotFch     = date("Y-m-d", time());
         $FotPath    = $public_path;
