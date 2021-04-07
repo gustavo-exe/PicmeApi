@@ -1,5 +1,8 @@
 <?php
 
+    //Al incluirlo aqui se incluye en todos lo desmas archivos
+    include("../../tools/cors.php");
+    
     $config = json_decode('
         {
             "db":{
