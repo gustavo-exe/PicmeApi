@@ -45,7 +45,7 @@
         
         ///Limpieza de parametros       
         $FotCod     = uniqid();
-        $FotFch     = date("Y-m-d", time());
+        $FotFch     = date("Y-m-d H:i:s", time());
         $FotPath    = $public_path;
 
         $UsrUsr     = mysqli_real_escape_string($mydb, $UsrUsr);

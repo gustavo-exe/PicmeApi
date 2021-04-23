@@ -11,7 +11,7 @@
             "3_eliminar" => "DELETE FROM coleccion wHERE ColCod = ? AND UsrUsr = ?;",
             "4_listado" => "SELECT * FROM coleccion wHERE UsrUsr = ?;",
             "5_obtener" => "SELECT * FROM coleccion WHERE UsrUsr = ? AND ColCod = ?;",
-            "6_obtener_fotos" => "SELECT * FROM fotos WHERE UsrUsr = ? AND ColCod = ?;"
+            "6_obtener_fotos" => "SELECT * FROM fotos WHERE UsrUsr = ? AND ColCod = ? ORDER BY FotFch DESC;"
         ),
         "fotos" => array(
             "1_insertar" => "INSERT INTO fotos  VALUES(?, ?, ?, ?, ?);",

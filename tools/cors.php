@@ -9,11 +9,12 @@
         header("Access-Control-Allow-Headers: X-Requested-With");
         @header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
     }
-    //Obtiene el valor de entrada y verifica que sea json
+
     @$params = json_decode(file_get_contents('php://input'), true);
     if(!empty($params)){
         $_POST = $params;
     }
 
     ini_set('session.cookie_samesite', 'None');
+    ini_set('session.cookie_secure', '1');
 ?>
