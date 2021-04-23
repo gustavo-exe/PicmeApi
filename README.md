@@ -4,13 +4,17 @@
 
 Este proyecto es la api contstruida con la logica de negocio para una PWA [PicmeCliente](https://github.com/gustavo-exe/PicmeCliente) 
 
-## Construido el Backend
+## Herramientas
+* WinSCP
+* Putty
 
-Servidor Local:
-* Ubuntu Server 20.04 LTS
+## Construido el Backend con
 
-Base de datos:
-* MySQL instalado con el APT Repository.
+* Servidor Local:
+Ubuntu Server 20.04 LTS
+
+* Base de datos:
+MySQL instalado con el APT Repository.
 
 Modelo de esqema de la base de datos:
 | usuarios | coleccion | fotos |
@@ -32,15 +36,19 @@ db":{
 },
 ```
 
-Servidor web/proxy inverso:
-* Ngnix
+* Servidor web/proxy inverso:
+Ngnix
 
-Lenguaje de programacion
-* PHP 7.4
+* Lenguaje de programacion
+PHP 7.4
 
+* AWS
+Simple Email Service
+
+* Manejado de paquetes para peticiones de corre electronico.
+composer phpmailer/phpmailer
 
 ## Pre requisitos
-
 Prepara la api con los requisitos anteriores y la normalizacion de la base de datos.
     
 
